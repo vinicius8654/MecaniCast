@@ -1,0 +1,24 @@
+Analise de Requisitos
+ 
+Eu Vinicius Matos, venho por este documento, fazer a análise de requisitos necessários para a produção do web site estático "Mecanicast".
+	O site Mecanicast dispõe da funcionalidade de informar e divulgar o trabalho de turma do CAI-SENAI de Manutenção automotiva de veículos leves.
+O site consistirá nas tecnologias aplicadas a diagramação de componentes, uso de marcadores de texto como:
+*Bloco de Notas;
+*Html;
+	conjuntamente com sistemas de estilização e interatividade:
+*CSS;
+*JavaScript;
+	Essas são as principais tecnologias para a produção do web site, fazendo com que seja possível desde a estruturação da pagina de rosto, estilização e UI/UX com o usuário. 
+
+O projeto será guardado em um repositório do GITHUB com manipulação e direitos de Vinicius Matos Martins, cada alteração deve ser apresentada e deve ser cadastrada na aba ISSUES do GitHub projects para manutenções e adições de funcionalidades. O projeto terá apenas uma branch (MAIN), cada alteração ou manutenção será feita com branch própria e depois feita um pull request e merge para juntar a branch à main. Deverá conter no repositório um arquivo README.md e um LICENSE para as especificações do projeto e as licenças sobre imagens, áudios e código, promovendo a segurança dos autores e dos consumidores do projeto.
+
+O código deverá disponibilizar recursos de acessibilidade para pessoas com deficiência, dês de falantes automatizados, controles, visores para baixa visão, astigamatismo e texto do áudio/vídeo do podcast disponível da matéria para pessoas com deficiência auditiva.
+
+O site é de caráter informativo e de apresentação do conteúdo mostrado pelos apresentadores comentaristas e convidados. toda a matéria estará disponível no site por meio de uma aba, onde deverá ser selecionado para mostrar os conteúdos específicos dependendo da escolha do usuário.
+
+
+	O web Site terá diversos componentes fixos, mas sem adição de frameworks específicos para a produção de componentes, apenas o html e blocos de reutilização caso seja preciso o mesmo elemento em vários lugares. 
+
+HEADER
+Começando com um pedaço do código, que será destinado ao HEADER do projeto, onde será uma barra horizontal no topo superior do site, contendo logo, guias de site e estilização, as guias contém espaços como: Contato, Sobre nós, Pautas, vídeos e áudio. Essa componente estará presente em todos os htmls diferentes presentes no site, todas as páginas além do index.html terá seu header estilizado da mesma maneira e aplicado da mesma maneira. Mas, a guia que não aparecerá, será a guia que está em uso no momento, a guia áudio não estará presente caso já esteja presente na página áudio. A logo do projeto deverá estar no canto esquerdo do componente. com tamanho visível.
+
