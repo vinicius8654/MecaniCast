@@ -1,0 +1,119 @@
+/* css/episodios.css */
+body {
+    background-color: #0e3b52;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+}
+
+.episodios-page {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 50px 30px;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 50px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.page-header h1 {
+    font-family: 'Arial Black', Impact, sans-serif;
+    font-size: 2.8rem;
+    color: #ffca28;
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    color: #cccccc;
+    font-size: 1.1rem;
+}
+
+.episodios-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.ep-item {
+    display: flex;
+    background-color: #092838;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: transform 0.25s ease;
+}
+
+.ep-item:hover {
+    transform: translateY(-4px);
+    border-color: #3b9db9;
+}
+
+.ep-item img {
+    width: 320px;
+    object-fit: cover;
+}
+
+.ep-detalhes {
+    padding: 25px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+}
+
+.ep-meta {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    font-size: 0.85rem;
+    color: #3b9db9;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.ep-num {
+    background-color: rgba(59, 157, 185, 0.2);
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+.ep-detalhes h2 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+
+.ep-detalhes p {
+    color: #d6e2e8;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.btn-play {
+    align-self: flex-start;
+    background-color: #3b9db9;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.btn-play:hover {
+    background-color: #ffca28;
+    color: #092838;
+}
+
+@media (max-width: 768px) {
+    .ep-item {
+        flex-direction: column;
+    }
+    .ep-item img {
+        width: 100%;
+        height: 200px;
+    }
+}
