@@ -1,0 +1,229 @@
+/* css/style.css */
+body {
+    background-color: #023047; /* Azul escuro do fundo */
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+}
+
+.main-content {
+    padding: 50px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Seção de Título */
+.hero-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.hero-title {
+    font-size: 3.2rem;
+    font-family: "Kotta One", sans-serif;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    font-weight: bold;
+    max-width: 850px;
+    margin: 0 auto 15px auto;
+    line-height: 1.5;
+}
+
+.hero-meta {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #cccccc;
+}
+
+/* Linha divisória */
+.divider {
+    border: 0;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.4);
+    margin: 40px auto;
+    width: 80%;
+}
+
+/* Seção de Imagem e Texto lado a lado */
+.content-section {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start; /* Alinha o topo da imagem com o topo do texto */
+    justify-content: space-between;
+    padding: 20px 0;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.content-image {
+    flex: 0.9;
+    position: sticky; /* Faz a imagem acompanhar levemente a rolagem se a tela for menor */
+    top: 30px;
+}
+.content-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.content-image img:hover{
+    transform: scale(1.02);
+}
+.content-heading {
+    font-family: 'Kotta One', serif; /* Usa a fonte do Google Fonts que você importou */
+    font-size: 1.8rem;
+    color: #ffca28; /* Amarelo da identidade visual da logo */
+    margin-bottom: 18px;
+}
+
+.content-text {
+    flex: 1.1;
+}
+
+.content-text p {
+    font-size: 1.1rem;
+    font-weight: normal; /* Texto corrido fica mais legível sem negrito total */
+    line-height: 1.65;
+    text-align: left;
+    color: #e6eef2;
+    margin-bottom: 16px; /* Espaço real entre cada parágrafo */
+}
+
+.content-text .call-to-action {
+    margin-top: 22px;
+    padding-left: 15px;
+    border-left: 4px solid #ffb703;/* lateral no azul do header */
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 1.15rem;
+}
+
+@media (max-width: 850px) {
+    .content-section {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .content-image {
+        position: static;
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+/* Vitrine de Atualização na Página Inicial */
+.latest-update-section {
+    width: 100%;
+    background-color: #092838;
+    padding: 60px 40px;
+    border-top: 2px solid #164e6b;
+}
+
+.latest-update-section .container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.update-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    background-color: #0e3b52;
+    padding: 35px;
+    border-radius: 14px;
+    border: 1px solid #ffb703;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.update-info {
+    flex: 1.2;
+}
+
+.badge-novo {
+    display: inline-block;
+    background-color: #ffca28;
+    color: #092838;
+    font-weight: 900;
+    font-size: 0.75rem;
+    padding: 5px 12px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.update-info h2 {
+    font-family: 'Arial Black', Impact, sans-serif;
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.update-info p {
+    color: #d6e2e8;
+    font-size: 1.05rem;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.update-actions {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-primario {
+    background-color: #3b9db9;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.btn-primario:hover {
+    background-color: #ffca28;
+    color: #092838;
+}
+
+.btn-secundario {
+    background-color: transparent;
+    color: #ffca28;
+    border: 2px solid #ffca28;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 22px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.btn-secundario:hover {
+    background-color: rgba(255, 202, 40, 0.15);
+}
+
+.update-thumb {
+    flex: 0.8;
+}
+
+.update-thumb img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+@media (max-width: 850px) {
+    .update-banner {
+        flex-direction: column-reverse;
+        padding: 25px;
+    }
+}

@@ -1,0 +1,49 @@
+/* css/header.css */
+.main-header {
+    background-color: #219ebc; /* Azul claro do topo */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    border-bottom: 2px solid #2a7a92;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-img {
+    height: 60px; /* Ajuste conforme o tamanho da sua imagem recortada */
+    width: auto;
+}
+
+.logo-text {
+    font-family: 'Arial Black', Impact, sans-serif;
+    font-size: 2.2rem;
+    color: #ffca28; /* Amarelo da logo */
+    -webkit-text-stroke: 2px #222; /* Contorno preto da letra */
+    text-shadow: 3px 3px 0px rgba(0,0,0,0.5); /* Sombra para dar profundidade */
+    letter-spacing: 1px;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.main-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Arial Black', Arial, sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 0.5px;
+}
+
+.main-nav a:hover {
+    color: #ffca28;
+    transition: color 0.3s ease;
+}
+.main-nav a.active { color: #ffca28; border-bottom: 2px solid #ffca28; padding-bottom: 4px; }
