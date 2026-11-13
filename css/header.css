@@ -47,3 +47,4 @@
     transition: color 0.3s ease;
 }
 .main-nav a.active { color: #ffca28; border-bottom: 2px solid #ffca28; padding-bottom: 4px; }
+

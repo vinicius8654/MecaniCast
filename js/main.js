@@ -2,17 +2,6 @@
 
 document.addEventListener("DOMContentLoaded", () => {
     console.log("Página carregada e JS conectado com sucesso!");
-
-    // Exemplo de interação: animação leve ao clicar nos links do menu
-    const navLinks = document.querySelectorAll('.main-nav a');
-    
-    navLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-            // Remove o preventDefault se os links forem para outras páginas reais
-            e.preventDefault(); 
-            console.log(`Você clicou em: ${e.target.innerText}`);
-        });
-    });
 });
 // A senha secreta que o podcaster precisa digitar no teclado
 const comandoSecreto = "mecanica"; 
