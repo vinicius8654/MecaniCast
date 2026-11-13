@@ -19,10 +19,11 @@ body {
 }
 
 .page-header h1 {
-    font-family: 'Arial Black', Impact, sans-serif;
+    font-family: "Kotta One", sans-serif;
     font-size: 2.8rem;
-    color: #ffca28;
+    color: #ffffff;
     margin-bottom: 10px;
+    letter-spacing: 1px;
 }
 
 .page-header p {
@@ -108,7 +109,7 @@ body {
     color: #092838;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 808px) {
     .ep-item {
         flex-direction: column;
     }
