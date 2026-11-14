@@ -1,6 +1,16 @@
+:root{
+    --azul-claro: #8ECAE6;
+    --azul-medio: #219EBC;
+    --azul-escuro: #023047;
+    --amarelo1: #ffb703;
+    --amarelo2: #ffca28;
+    --laranja: #fb8500;
+    --preto-carbono: #111111;
+    --branco-gelo: #f4f7f9;
+}
 body {
-    background-color: #023047;
-    color: #f3f4f6;
+    background-color: var(--preto-carbono);
+    color: var(--branco-gelo);
     font-family: system-ui, -apple-system, sans-serif;
     line-height: 1.5;
     margin:0;
@@ -65,7 +75,7 @@ body {
     min-height: calc((10vh - 140px) /2);
     display: flex;
     align-items: stretch;
-    background-color: #164e6b;
+    background-color: var(--azul-escuro);
     border: 1px solid #ffca28;
     border-radius: 10px;
     overflow: hidden;
@@ -74,12 +84,13 @@ body {
 
 .cards-stack .person-card:hover {
     transform: translateY(-3px);
-    border-color: #ffca28;
+    border-color: var(--amarelo2);
+     box-shadow: 0px 1px 10px var(--azul-escuro);
 }
 
 .person-photo {
     flex: 0 0 300px; /* Largura fixa da foto à esquerda */
-    background-color: #1f2430;
+    background-color: var(--preto-carbono);
 }
 
 .cards-stack .person-photo img {
@@ -100,7 +111,7 @@ body {
 .cards-stack .person-info h2 {
     font-family: 'Kotta One', serif;
     font-size: 1.25rem;
-    color: #ffffff;
+    color: var(--branco-gelo);
     margin: 0 0 6px 0;
 }
 
@@ -108,7 +119,7 @@ body {
     font-size: 0.78rem;
     text-transform: uppercase;
     letter-spacing: 0.8px;
-    color: #ffca28;
+    color: var(--amarelo2);
     font-weight: 600;
     margin-bottom: 8px;
 }
@@ -126,8 +137,8 @@ body {
 .cards-grid .person-card {
     display: flex;
     align-items: stretch;
-    background-color: #164e6b;
-    border: 1px solid #ffca28;
+    background-color: var(--preto-carbono);
+    border: 1px solid var(--amarelo2);
     border-radius: 10px;
     overflow: hidden;
     transition: transform 0.2s ease, border-color 0.2s ease;
@@ -135,7 +146,8 @@ body {
 
 .cards-grid .person-card:hover {
     transform: translateY(-4px);
-    border-color: #ffca28;
+    border-color: var(--amarelo1);
+     box-shadow: 0px 1px 10px var(--azul-escuro);
 }
 
 .cards-grid .person-photo {
@@ -161,7 +173,7 @@ body {
 .cards-grid .person-info h2 {
     font-family: 'Kotta One', serif;
     font-size: 1.25rem;
-    color: #ffffff;
+    color: var(--branco-gelo);
     margin: 0 0 6px 0;
 }
 
@@ -169,14 +181,14 @@ body {
     font-size: 0.78rem;
     text-transform: uppercase;
     letter-spacing: 0.8px;
-    color: #ffca28;
+    color: var(--amarelo2);
     font-weight: 600;
     margin-bottom: 8px;
 }
 
 .cards-grid .person-info p {
     font-size: 0.9rem;
-    color: #b0b7c3;
+    color: var(--branco-gelo);
     margin: 0;
 }
 

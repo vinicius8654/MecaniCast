@@ -1,50 +1,398 @@
-/* css/header.css */
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+    --azul-claro: #8ECAE6;
+    --azul-medio: #219EBC;
+    --azul-escuro: #023047;
+    --amarelo: #FFB703;
+    --laranja: #FB8500;
+    --preto-carbono: #111111;
+    --branco-gelo: #F4F7F9;
+}
+
 .main-header {
-    background-color: #219ebc; /* Azul claro do topo */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background-color: var(--preto-carbono);
+    border-bottom: 1px solid rgba(33, 158, 188, 0.35);
+    transition: box-shadow 0.3s ease;
+}
+
+.main-header.scrolled {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.75);
+}
+
+.header-inner {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 10px 40px;
-    border-bottom: 2px solid #2a7a92;
+    align-items: stretch;
+    height: 80px;
+    max-width: 100%;
+    position: relative;
 }
 
-.logo-container {
+/* =========================================================
+   ZONA DA MARCA (2 Imagens + Corte Diagonal Automotivo)
+   ========================================================= */
+.brand-zone {
+    position: relative;
     display: flex;
     align-items: center;
-    gap: 15px;
+    background-color: var(--azul-escuro);
+    padding: 0 64px 0 5%;
+    /* Corte diagonal na borda direita */
+    clip-path: polygon(0 0, 100% 0, calc(100% - 28px) 100%, 0 100%);
+    z-index: 2;
 }
 
-.logo-img {
-    height: 60px; /* Ajuste conforme o tamanho da sua imagem recortada */
+.brand-link {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+}
+
+.car-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.logo-car {
+    height: 44px;
     width: auto;
+    object-fit: contain;
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), filter 0.35s ease;
 }
 
-.logo-text {
-    font-family: 'Arial Black', Impact, sans-serif;
-    font-size: 2.2rem;
-    color: #ffca28; /* Amarelo da logo */
-    -webkit-text-stroke: 2px #222; /* Contorno preto da letra */
-    text-shadow: 3px 3px 0px rgba(0,0,0,0.5); /* Sombra para dar profundidade */
-    letter-spacing: 1px;
+.logo-type {
+    height: 110px;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), filter 0.35s ease;
+}
+.logo-type:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 8px rgba(255, 183, 3, 0.45));
+}
+
+
+/* Faixas de corrida na diagonal */
+.racing-stripe {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 6px;
+    transform: skewX(-19deg);
+}
+
+.stripe-yellow {
+    right: 22px;
+    background-color: var(--amarelo);
+}
+
+.stripe-orange {
+    right: 12px;
+    background-color: var(--laranja);
+}
+
+/* =========================================================
+   NAVEGAÇÃO DESKTOP
+   ========================================================= */
+.main-nav {
+    display: flex;
+    align-items: center;
+    padding-right: 5%;
+}
+
+.mobile-nav-header {
+    display: none;
 }
 
 .main-nav ul {
     display: flex;
+    align-items: center;
     list-style: none;
-    gap: 25px;
+    gap: 6px;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.main-nav li {
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .main-nav a {
-    color: #ffffff;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 100%;
+    padding: 0 18px;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--azul-claro);
     text-decoration: none;
-    font-family: 'Arial Black', Arial, sans-serif;
-    font-size: 1.4rem;
-    letter-spacing: 0.5px;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.nav-num {
+    font-size: 0.7rem;
+    color: var(--azul-medio);
+    transition: color 0.2s ease;
+}
+
+/* Linha indicadora estilo ponteiro na base do link */
+.main-nav a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 18px;
+    right: 18px;
+    height: 3px;
+    background-color: var(--amarelo);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s ease;
 }
 
 .main-nav a:hover {
-    color: #ffca28;
-    transition: color 0.3s ease;
+    color: var(--branco-gelo);
+    background-color: rgba(2, 48, 71, 0.45);
 }
-.main-nav a.active { color: #ffca28; border-bottom: 2px solid #ffca28; padding-bottom: 4px; }
 
+.main-nav a:hover .nav-num {
+    color: var(--amarelo);
+}
+
+.main-nav a:hover::after {
+    transform: scaleX(1);
+}
+
+/* Link da página atual */
+.main-nav a.active {
+    color: var(--preto-carbono);
+    background-color: var(--amarelo);
+}
+
+.main-nav a.active .nav-num {
+    color: var(--azul-escuro);
+}
+
+.main-nav a.active::after {
+    display: none;
+}
+
+/* =========================================================
+   BARRA DE RPM (Progresso de Scroll)
+   ========================================================= */
+.rpm-bar-track {
+    width: 100%;
+    height: 3px;
+    background-color: #1c1c1c;
+    overflow: hidden;
+}
+
+.rpm-bar-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, var(--azul-medio) 0%, var(--amarelo) 65%, var(--laranja) 100%);
+    transition: width 0.08s linear;
+}
+
+/* =========================================================
+   BOTÃO MOBILE (Oculto no Desktop)
+   ========================================================= */
+.menu-toggle {
+    display: none;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+    border: none;
+    color: var(--branco-gelo);
+    padding: 0 5%;
+    cursor: pointer;
+    z-index: 1002;
+}
+
+.toggle-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--amarelo);
+}
+
+.hamburger-bars {
+    width: 26px;
+    height: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hamburger-bars span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--branco-gelo);
+    transition: transform 0.3s ease, opacity 0.2s ease, background-color 0.3s ease;
+}
+
+/* Animação do X quando o menu abre */
+.menu-toggle.is-open .hamburger-bars span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+    background-color: var(--laranja);
+}
+
+.menu-toggle.is-open .hamburger-bars span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.is-open .hamburger-bars span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+    background-color: var(--laranja);
+}
+
+/* =========================================================
+   RESPONSIVIDADE (Tablets e Celulares)
+   ========================================================= */
+@media (max-width: 1024px) {
+    .main-nav a {
+        padding: 0 12px;
+        font-size: 0.78rem;
+    }
+
+    .brand-zone {
+        padding-right: 48px;
+    }
+}
+
+@media (max-width: 820px) {
+    .header-inner {
+        height: 68px;
+    }
+
+    .brand-zone {
+        padding: 0 42px 0 4%;
+        clip-path: polygon(0 0, 100% 0, calc(100% - 20px) 100%, 0 100%);
+    }
+
+    .logo-car {
+        height: 34px;
+    }
+
+    .logo-type {
+        height: 110px;
+    }
+
+    .racing-stripe {
+        width: 4px;
+        transform: skewX(-16deg);
+    }
+
+    .stripe-yellow { right: 16px; }
+    .stripe-orange { right: 9px; }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* Gaveta Tática Full-Screen no Mobile */
+    .main-nav {
+        position: fixed;
+        top: 68px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 68px);
+        background-color: var(--preto-carbono);
+        border-top: 2px solid var(--azul-medio);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 32px 6%;
+        box-sizing: border-box;
+        transform: translateX(100%);
+        transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+        z-index: 1001;
+        overflow-y: auto;
+    }
+
+    .main-nav.is-open {
+        transform: translateX(0);
+    }
+
+    .mobile-nav-header {
+        display: block;
+        width: 100%;
+        padding-bottom: 14px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #262626;
+    }
+
+    .telemetry-tag {
+        font-family: 'Space Mono', monospace;
+        font-size: 0.75rem;
+        letter-spacing: 2px;
+        color: var(--azul-medio);
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        height: auto;
+        gap: 12px;
+    }
+
+    .main-nav li {
+        height: auto;
+        width: 100%;
+    }
+
+    .main-nav a {
+        width: 100%;
+        height: auto;
+        padding: 18px 20px;
+        font-size: 1.1rem;
+        background-color: var(--azul-escuro);
+        border-left: 4px solid var(--azul-medio);
+        box-sizing: border-box;
+    }
+
+    .main-nav a::after {
+        display: none;
+    }
+
+    .main-nav a.active {
+        background-color: var(--amarelo);
+        color: var(--preto-carbono);
+        border-left-color: var(--laranja);
+    }
+}
+
+/* Ajuste extra para telas muito pequenas (360px) */
+@media (max-width: 380px) {
+    .brand-link {
+        gap: 8px;
+    }
+
+    .logo-car {
+        height: 28px;
+    }
+
+    .logo-type {
+        height: 22px;
+    }
+
+    .toggle-label {
+        display: none; /* Mantém só as barras para não apertar as 2 logos */
+    }
+}

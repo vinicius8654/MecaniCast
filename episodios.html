@@ -3,68 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Episódios - Mecanicast</title>
-     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>Episódios | Mecanicast</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kotta+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kotta+One&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/episodios.css">
 </head>
 <body>
-    <!-- Mesmo Header da Página Inicial -->
-    <header class="main-header">
-        <a href="index.html" class="logo-container" style="text-decoration: none;">
-            <img src="assets/download.png" alt="Carro" class="logo-img">
-            <img src="assets/tipografia.png" alt="tipografia" class="logo-img">
-        </a>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="episodios.html" class="active">Episódios</a></li>
-                <li><a href="producao.html">Equipe</a></li>
-                <li><a href="convidados.html">Convidados</a></li>
-            </ul>
-        </nav>
+    <!-- Header Padrão Mecanicast -->
+    <header class="main-header" id="mainHeader">
+        <div class="header-inner">
+            <div class="brand-zone">
+                <a href="index.html" class="brand-link" aria-label="Mecanicast - Página Inicial">
+                    <div class="car-wrapper">
+                        <img src="assets/download.png" alt="Logo Carro Mecanicast" class="logo-car">
+                    </div>
+                    <img src="assets/tipografia.png" alt="Mecanicast" class="logo-type">
+                </a>
+                <span class="racing-stripe stripe-yellow" aria-hidden="true"></span>
+                <span class="racing-stripe stripe-orange" aria-hidden="true"></span>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+                <span class="toggle-label">MENU</span>
+                <div class="hamburger-bars">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+
+            <nav class="main-nav" id="mainNav">
+                <div class="mobile-nav-header">
+                    <span class="telemetry-tag">// NAVEGAÇÃO DE PISTA</span>
+                </div>
+                <ul>
+                    <li><a href="index.html"><span class="nav-num">01</span>Início</a></li>
+                    <li><a href="episodios.html" class="active"><span class="nav-num">02</span>Episódios</a></li>
+                    <li><a href="producao.html"><span class="nav-num">04</span>Produção</a></li>
+                    <li><a href="convidados.html"><span class="nav-num">05</span>Convidados</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="rpm-bar-track">
+            <div class="rpm-bar-fill" id="rpmBar"></div>
+        </div>
     </header>
 
-    <!-- Catálogo Completo de Episódios -->
-    <main class="episodios-page">
-        <div class="page-header">
-            <h1>Todos os Episódios</h1>
-            <p>Acompanhe nossos debates sobre automóveis, automobilismo e mercado.</p>
-        </div>
-
-        <section class="episodios-lista">
-            <!-- Episódio 1 -->
-            <article class="ep-item">
-                <img src="assets/banner.jpg" alt="Capa Episódio 1">
-                <div class="ep-detalhes">
-                    <div class="ep-meta">
-                        <span class="ep-num">#01</span>
-                        <span>Convidados: Renou e Pimenta</span>
-                    </div>
-                    <h2>Carros elétricos x combustão</h2>
-                    <p>Renou e Pimenta são intrevisatados e comentam sobre o assunto mais comentado do monento, a guerra infinita entre carros a combustão e os elétricos. Abordamos os pontos mais criticos de cada lado da história. Qual será a opinião dos profissionais sobre o futuro do novo mundo automtoivo?</p>
-                    <a href="https://youtu.be/ZVEnXocEXO4" class="btn-play">▶ Assistir Episódio</a>
-                </div>
-            </article>
-
-            <!-- Episódio 2 (Exemplo) -->
-            <article class="ep-item">
-                <img src="assets/banner-mecanicast.png" alt="Capa Episódio 2">
-                <div class="ep-detalhes">
-                    <div class="ep-meta">
-                        <span class="ep-num">#02</span>
-                        <span>Convidados: Especialistas F1</span>
-                    </div>
-                    <h2>O futuro do automobilismo e novas regulamentações</h2>
-                    <p>Análise completa sobre aerodinâmica, sustentabilidade nas pistas e o impacto comercial das grandes equipes.</p>
-                    <a href="#" class="btn-play">▶ Ouvir Episódio</a>
-                </div>
-            </article>
+    <main class="main-content">
+        <!-- Cabeçalho da Página (100% Público) -->
+        <section class="episodes-hero">
+            <div class="hero-copy">
+                <span class="telemetry-kicker">// ARQUIVO DE VÍDEO & DEBATES TÉCNICOS</span>
+                <h1 class="hero-title">EPISÓDIOS</h1>
+                <p class="hero-subtitle">Assista aos episódios completos e acompanhe nossas análises sobre engenharia, mercado e pista.</p>
+            </div>
         </section>
+
+        <!-- Barra de Telemetria: Busca e Filtros -->
+        <section class="telemetry-toolbar" aria-label="Filtros de episódios">
+            <div class="search-box">
+                <span class="search-prefix">BUSCAR //</span>
+                <input type="text" id="searchInput" placeholder="Título, convidado ou assunto...">
+            </div>
+
+            <div class="filter-tabs" id="filterTabs">
+                <button type="button" class="filter-btn active" data-category="TODOS">TODOS</button>
+                <button type="button" class="filter-btn" data-category="MERCADO">MERCADO</button>
+                <button type="button" class="filter-btn" data-category="ENGENHARIA">ENGENHARIA</button>
+                <button type="button" class="filter-btn" data-category="AUTOMOBILISMO">AUTOMOBILISMO</button>
+            </div>
+
+            <div class="episode-counter" id="episodeCounter">00 EPISÓDIOS</div>
+        </section>
+
+        <!-- Lista de Episódios Renderizada via JS -->
+        <section class="episodes-list" id="episodesList" aria-live="polite"></section>
     </main>
 
+    <!-- Modal Player de Vídeo do YouTube (Widescreen 16:9) -->
+    <div class="modal-backdrop" id="videoModal" aria-hidden="true">
+        <div class="video-modal-panel" role="dialog" aria-labelledby="videoModalTitle">
+            <div class="video-modal-header">
+                <div class="video-modal-meta">
+                    <span class="telemetry-kicker" id="videoModalBadge">// TRANSMISSÃO EM ESTÚDIO</span>
+                    <h2 id="videoModalTitle">Título do Episódio</h2>
+                    <span class="video-modal-guests" id="videoModalGuests"></span>
+                </div>
+
+                <div class="video-modal-actions">
+                    <a href="#" target="_blank" rel="noopener" id="btnExternalYoutube" class="btn-yt-external">
+                        ABRIR NO YOUTUBE ↗
+                    </a>
+                    <button type="button" class="btn-close-modal" id="btnCloseVideo" aria-label="Fechar player">✕</button>
+                </div>
+            </div>
+
+            <div class="video-frame-wrapper">
+                <iframe
+                    id="youtubeIframe"
+                    src=""
+                    title="Player de vídeo Mecanicast"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts (A ordem abaixo garante que os dados carreguem antes da renderização) -->
     <script src="js/main.js"></script>
+    <script src="js/episodes-data.js"></script>
+    <script src="js/episodios.js"></script>
 </body>
 </html>
