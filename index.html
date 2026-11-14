@@ -3,82 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mecanicast</title>
-    <!-- Importação dos arquivos CSS separados -->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta name="description" content="Mecanicast — Podcast dedicado ao universo dos automóveis, engenharia, automobilismo e mercado da mobilidade.">
+    <title>Mecanicast | Podcast Automotivo</title>
+    <link rel="icon" href="assets/download.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kotta+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kotta+One&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Cabeçalho (Header) reutilizável -->
-    <header class="main-header">
-        <div class="logo-container">
-            <!-- Coloque a imagem recortada do carro na pasta img -->
-            <img src="assets/download.png" alt="Carro" class="logo-img">
-            <img src="assets/tipografia.png" alt="tipografia" class="logo-img">
+    <!-- Cabeçalho (Header) Padrão -->
+    <header class="main-header" id="mainHeader">
+        <div class="header-inner">
+            <div class="brand-zone">
+                <a href="index.html" class="brand-link" aria-label="Mecanicast - Página Inicial">
+                    <div class="car-wrapper">
+                        <img src="assets/download.png" alt="Logo Carro Mecanicast" class="logo-car">
+                    </div>
+                    <img src="assets/tipografia.png" alt="Mecanicast" class="logo-type">
+                </a>
+                <span class="racing-stripe stripe-yellow" aria-hidden="true"></span>
+                <span class="racing-stripe stripe-orange" aria-hidden="true"></span>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+                <span class="toggle-label">MENU</span>
+                <div class="hamburger-bars">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+
+            <nav class="main-nav" id="mainNav">
+                <div class="mobile-nav-header">
+                    <span class="telemetry-tag">// NAVEGAÇÃO DE PISTA</span>
+                </div>
+                <ul>
+                    <li><a href="index.html" class="active"><span class="nav-num">01</span>Início</a></li>
+                    <li><a href="episodios.html"><span class="nav-num">02</span>Episódios</a></li>
+                    <li><a href="producao.html"><span class="nav-num">03</span>Produção</a></li>
+                    <li><a href="convidados.html"><span class="nav-num">04</span>Convidados</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="episodios.html">Episódios</a></li>
-                <li><a href="producao.html">Equipe</a></li>
-                <li><a href="convidados.html">Convidados</a></li>
-            </ul>
-        </nav>
+        <div class="rpm-bar-track">
+            <div class="rpm-bar-fill" id="rpmBar"></div>
+        </div>
     </header>
 
     <!-- Conteúdo Principal -->
     <main class="main-content">
         <section class="hero-section">
-            <h2 class="hero-title">MECANICAST</h2>
+            <h1 class="hero-title">MECANICAST</h1>
             <p class="hero-subtitle">Podcast para você, amante de automóveis</p>
             <p class="hero-meta">por: Mecanicast</p>
         </section>
 
         <hr class="divider">
 
-       <section class="content-section">
-    <div class="content-image">
-        <img src="assets/Carros elétricos x combustão.png" alt="Banner Mecanicast">
-    </div>
-    
-    <div class="content-text">
-        <h3 class="content-heading">Sobre o Podcast</h3>
-        
-        <p>O <strong>Mecanicast</strong> é o seu ponto de encontro definitivo para quem é apaixonado por velocidade, inovação e tudo o que nos faz ir mais longe. Nosso espaço é dedicado a explorar a fundo o universo dos automóveis, os bastidores de alta voltagem do automobilismo e a evolução constante dos mais diversos meios de transporte.</p>
+        <section class="content-section">
+            <div class="content-image">
+                <img src="assets/Carros elétricos x combustão.png" alt="Banner Mecanicast">
+                <img src="assets/mesaexemplo.png" alt="Bancada Mecanicast" loading="lazy">
+            </div>
 
-        <p>Mais do que apenas falar sobre motores e design, nós propomos um debate inteligente e aprofundado. Aqui, as discussões vão além da pista e chegam aos conselhos administrativos: analisamos o mercado automotivo, as tendências da indústria, as transições tecnológicas (como a acirrada corrida entre os veículos a combustão e os elétricos) e as estratégias globais que moldam o futuro da mobilidade.</p>
+            <div class="content-text">
+                <h2 class="content-heading">Sobre o Podcast</h2>
 
-        <p>Para garantir que nossas análises tenham a máxima precisão, trazemos regularmente convidados de peso e especialistas da área — engenheiros, pilotos, analistas de mercado e profissionais do setor — para sentar à mesa, debater ideias e compartilhar visões exclusivas.</p>
+                <p>O <strong>Mecanicast</strong> é o seu ponto de encontro definitivo para quem é apaixonado por velocidade, inovação e tudo o que nos faz ir mais longe. Nosso espaço é dedicado a explorar a fundo o universo dos automóveis, os bastidores de alta voltagem do automobilismo e a evolução constante dos mais diversos meios de transporte.</p>
 
-        <p class="call-to-action">Ajuste os retrovisores, escolha o seu episódio e embarque nessa jornada com a gente. O debate já vai começar!</p>
-    </div>
-</section>
+                <p>Mais do que apenas falar sobre motores e design, nós propomos um debate inteligente e aprofundado. Aqui, as discussões vão além da pista e chegam aos conselhos administrativos: analisamos o mercado automotivo, as tendências da indústria, as transições tecnológicas (como a acirrada corrida entre os veículos a combustão e os elétricos) e as estratégias globais que moldam o futuro da mobilidade.</p>
+
+                <p>Para garantir que nossas análises tenham a máxima precisão, trazemos regularmente convidados de peso e especialistas da área — engenheiros, pilotos, analistas de mercado e profissionais do setor — para sentar à mesa, debater ideias e compartilhar visões exclusivas.</p>
+
+                <p class="call-to-action">Ajuste os retrovisores, escolha o seu episódio e embarque nessa jornada com a gente. O debate já vai começar!</p>
+            </div>
+        </section>
     </main>
 
-    <section class="latest-update-section">
-        <div class="container">
-            <div class="update-banner">
-                <div class="update-info">
-                    <span class="badge-novo">NOVO EPISÓDIO NO AR</span>
-                    <h2>Carros elétricos x combustão</h2>
-                    <p>Renou e Pimenta são intrevisatados e comentam sobre o assunto mais comentado do momento, a guerra infinita entre carros a combustão e os elétricos. Abordamos os pontos mais criticos de cada lado da história. Qual será a opinião dos profissionais sobre o futuro do novo mundo automtoivo?</p>
-                    
-                    <div class="update-actions">
-                        <a href="episodios.html" class="btn-primario">Assistir Agora</a>
-                        <a href="episodios.html" class="btn-secundario">Ver Todos os Episódios →</a>
-                    </div>
+    <!-- Seção Dinâmica: Puxa APENAS o 1º episódio de js/episodes-data.js -->
+    <section class="latest-update-section" id="latestEpisodeSection" aria-live="polite"></section>
+
+    <!-- Rodapé Técnico -->
+    <footer class="main-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <span class="footer-kicker">// MECANICAST TELEMETRIA</span>
+                <p>Debates técnicos sobre engenharia, pista e o futuro da mobilidade.</p>
+            </div>
+            <nav class="footer-links" aria-label="Links do rodapé">
+                <a href="episodios.html">EPISÓDIOS</a>
+                <a href="producao.html">PRODUÇÃO</a>
+                <a href="convidados.html">CONVIDADOS</a>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- Modal Player de Vídeo do YouTube -->
+    <div class="modal-backdrop" id="videoModal" aria-hidden="true">
+        <div class="video-modal-panel" role="dialog" aria-modal="true" aria-labelledby="videoModalTitle">
+            <div class="video-modal-header">
+                <div class="video-modal-meta">
+                    <span class="telemetry-kicker" id="videoModalBadge">// TRANSMISSÃO EM ESTÚDIO</span>
+                    <h2 id="videoModalTitle">Título do Episódio</h2>
+                    <span class="video-modal-guests" id="videoModalGuests"></span>
                 </div>
-                <div class="update-thumb">
-                    <img src="assets/banner.jpg" alt="Capa do Episódio">
+
+                <div class="video-modal-actions">
+                    <a href="#" target="_blank" rel="noopener" id="btnExternalYoutube" class="btn-yt-external">
+                        ABRIR NO YOUTUBE ↗
+                    </a>
+                    <button type="button" class="btn-close-modal" id="btnCloseVideo" aria-label="Fechar player">✕</button>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Importação do JavaScript -->
+            <div class="video-frame-wrapper">
+                <iframe
+                    id="youtubeIframe"
+                    title="Player de vídeo Mecanicast"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Importação dos Scripts (Dados antes do main.js) -->
+    <script src="js/episodes-data.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

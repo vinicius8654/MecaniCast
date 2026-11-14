@@ -12,20 +12,50 @@
     <link rel="stylesheet" href="css/equipe.css">
 </head>
 <body>
-    <header class="main-header">
-        <div class="logo-container">
-                <img src="assets/download.png" alt="Carro" class="logo-img">
-             <a href="index.html"><img src="assets/tipografia.png" alt="Mecanicast" class="logo-img"></a> 
+<header class="main-header" id="mainHeader">
+    <div class="header-inner">
+        <!-- Bloco da Marca com corte diagonal -->
+        <div class="brand-zone">
+            <a href="index.html" class="brand-link" aria-label="Mecanicast - Página Inicial">
+                <div class="car-wrapper">
+                    <img src="assets/download.png" alt="Logo Carro Mecanicast" class="logo-car">
+                </div>
+                <img src="assets/tipografia.png" alt="Mecanicast" class="logo-type">
             </a>
+            <!-- Faixas de corrida na diagonal -->
+            <span class="racing-stripe stripe-yellow" aria-hidden="true"></span>
+            <span class="racing-stripe stripe-orange" aria-hidden="true"></span>
         </div>
-        <nav class="main-nav">
+
+        <!-- Botão Hambúrguer (Aparece apenas no celular/tablet) -->
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+            <span class="toggle-label">MENU</span>
+            <div class="hamburger-bars">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </button>
+
+        <!-- Navegação Desktop + Gaveta Mobile -->
+        <nav class="main-nav" id="mainNav">
+            <div class="mobile-nav-header">
+                <span class="telemetry-tag">// NAVEGAÇÃO DE PISTA</span>
+            </div>
             <ul>
-                <li><a href="episodios.html">Episódios</a></li>
-                <li><a href="producao.html" class="active">Produção</a></li>
-                <li><a href="convidados.html">Convidados</a></li>
+                <li><a href="index.html" ><span class="nav-num">01</span>Início</a></li>
+                <li><a href="episodios.html"><span class="nav-num">02</span>Episódios</a></li>
+                <li><a href="producao.html" class="active"><span class="nav-num">03</span>Produção</a></li>
+                <li><a href="convidados.html"><span class="nav-num">04</span>Convidados</a></li>
             </ul>
         </nav>
-    </header>
+    </div>
+
+    <!-- Barra de RPM que acompanha a rolagem da página -->
+    <div class="rpm-bar-track">
+        <div class="rpm-bar-fill" id="rpmBar"></div>
+    </div>
+</header>
 
     <main class="main-content">
         <section class="hero-section">
